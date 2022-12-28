@@ -1,0 +1,13 @@
+def binary(n):
+    if n>1:
+        binary(n//2)
+    print(n%2,end="")
+a=int(input("enter a number of test cases :"))
+arr=[]
+for i in range(a):
+      arr.append(int(input("enter number:")))
+print("binary numbers are as follows")
+for i in arr:
+      print(i,": ",end="")
+      binary(i)
+      print()
