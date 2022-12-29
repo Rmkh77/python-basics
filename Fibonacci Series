@@ -1,0 +1,19 @@
+b=int(input("enter the lenght of series to be printed:"))
+a=list(map(int,input("enter first two numbers separated by space:").split()))
+
+print("The Fibonacci Series upto",b,"lenght is:")
+
+print(a[0],a[1],end=" ")#prints first two numbers
+
+for i in range(b-2):
+    print(a[0]+a[1],end=" ")
+    t=a[1]#storing 2nd value in a temporary variable
+    a[1]=a[0]+a[1]#add 1st and 2nd values of list and assigning to 2nd value
+    a[0]=t#temporary variable is loaded into 1st value
+'''
+sample output:
+enter the lenght of series to be printed:10
+enter first two numbers separated by space:10 20
+The Fibonacci Series upto 10 lenght is:
+10 20 30 50 80 130 210 340 550 890 
+'''
