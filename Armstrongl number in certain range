@@ -1,0 +1,28 @@
+a=int(input("enter starting limit:"))
+b=int(input("enter maximum limit:"))
+arr=[]
+def isarm(n,lenght):#this function is for to check passed number is armstrong or not
+    temp=n
+    su=0
+    while temp!=0:
+        t=temp%10
+        su=su+t**lenght
+        temp//=10
+    if su==n:
+        arr.append(n)#if armstrong then it appends to list
+        
+def dig(k):#this function returns number of digits of the passed number
+    c=0
+    while k!=0:
+        k//=10
+        c+=1
+    return c# returns number of digits
+    
+for i in range(a,b+1):
+    isarm(i,dig(i))#passing every number in the given range to check whether it is armstrong or not
+    
+#prints armstrong numbers in the given range
+if len(arr)==0:
+    print("there are no armstrong numbers in between",a,"and",b)
+else:
+    print("the armstrong numbers are :",arr)
