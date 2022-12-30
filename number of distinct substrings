@@ -1,0 +1,23 @@
+def count(a):
+    l=len(a)
+    arr1=set()
+    for i in range(l):
+        for j in range(i+1,l+1):
+            arr1.add(str(a[i:j]))
+    print("Number of possible substrings are :",len(arr1),"\nThey are:",arr1)
+n=int(input("enter number of test cases:"))
+print("enter strings:")
+for i in range(n):
+    print("string",i+1,":",end="")
+    x=input()
+    count(x)
+'''
+enter number of test cases:2
+enter strings:
+string 1 :aannbb
+number of possible substrings are : 18 
+they are: {'nb', 'aann', 'nbb', 'an', 'aa', 'nnbb', 'b', 'annbb', 'bb', 'aan', 'n', 'nnb', 'nn', 'a', 'ann', 'annb', 'aannbb', 'aannb'}
+string 2 :aaee
+number of possible substrings are : 8 
+they are: {'e', 'aae', 'aaee', 'aa', 'ee', 'ae', 'a', 'aee'}
+'''
